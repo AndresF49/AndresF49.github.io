@@ -1,0 +1,116 @@
+:root {
+	--primary: rgba(157,0,255,1);
+	--secondary: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	 /* //background: #080808;   */
+	color: var(--secondary);
+	 /* //background: #452c63;  */
+	background: radial-gradient(circle at bottom center, var(--primary) 0%, rgba(36,36,36,1) 100%);
+}
+
+
+
+.icons {
+	color: var(--secondary);
+}
+
+/* .homeIcon {
+	vertical-align: auto;
+} */
+
+/* .homeIcon:hover {	
+	color: var(--primary);
+	transition: 0.3s;
+} */
+
+#header {
+	width: 100%;
+	height: 100vh;
+	/* background-image: url("img/pfp.jpg");
+	background-size: cover; */
+
+}
+
+.container {
+	padding: 10px 10%;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	/* background-color: aqua; */
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 20px;
+
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: var(--secondary);
+	font-size: 18px;
+	position: relative;
+}
+
+nav ul li a::after {
+	content: '';
+	width: 0;
+	height: 3px;
+	background: var(--primary);
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.3s; 
+	/* 17:11 */
+}
+
+nav ul li a:hover::after {
+	width: 100%;
+}
+
+.header-text {
+	margin-top: 20%;
+	font-size: 30px;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.header-text-col-1 {
+	align-self: flex-start;
+}
+
+.header-text-col-pic {
+	align-self: flex-end;
+}
+
+.mex {
+	width:300px;
+	height:300px;
+	object-fit:cover;
+	/* border-radius:50%; */
+  }
+
+.header-text-col-1 h1 {
+	font-size: 60px;
+	margin-top: 20px;
+}
+
+.header-text-col-1 h1 span {
+	color: var(--primary);
+}
