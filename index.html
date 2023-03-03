@@ -26,20 +26,55 @@
 					<h1>Hi, I'm <span>Andres</span> Flores</h1>
 				</div>
 				<div class="header-text-col-pic">
-					<img class="mex" src="/img/mex.jpg" atl="image from mexico" />
+					<img class="mex" src="img/pb1.jpg" atl="image from mexico" />
 				</div>
 			</div>
 		</div>
 	</div>
 	<main>
+		<!-- ---------------about--------------- -->
 		<div id="about">
 			<div class="container">
 				<div class="row">
 					<div class="about-col-1">
-
+						<img id="aboutPfp" src="img/pfp.jpg">
 					</div>
 					<div class="about-col-2">
-						<!-- 20:10 -->
+						<h1 class="sub-title">About Me</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<div class="tab-titles">
+							<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+							<p class="tab-links" onclick="opentab('experience')">Experience</p>
+							<p class="tab-links" onclick="opentab('education')">Education</p>
+						</div>
+						<div class="tab-contents active-tab" id="skills">
+							<!-- skills -->
+							<ul>
+								<li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+								<li><span>Web development</span><br>web app dev</li>
+								<li><span>app development</span><br>building android/ios apps</li>
+
+							</ul>
+						</div>
+						<div class="tab-contents" id="experience">
+							<!-- Experience -->
+							<ul>
+								<li><span>2021 - current</span><br>UI/UX Design training at et institute</li>
+								<li><span>2019 - 2021</span><br>Team lead at starApp llc.</li>
+								<li><span>2017-2019</span><br>UI/UX Design executive at coin digital</li>
+
+							</ul>
+						</div>
+						<div class="tab-contents" id="education">
+							<!-- Education -->
+							<ul>
+								<li><span>2016</span><br>UI/UX design training at ET</li>
+								<li><span>2016</span><br>MBA from MIT bangalore</li>
+								<li><span>2014</span><br>BBA From ism bangalore</li>
+
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -48,5 +83,27 @@
 	<h1>Hello World!</h1>
 
 	</main>
+
+<script>
+	let tablinks = document.getElementsByClassName("tab-links");
+	let tabcontents = document.getElementsByClassName("tab-contents");
+
+	function opentab(tabName) {
+		for (tablink of tablinks) {
+			tablink.classList.remove("active-link");
+		}
+		for (tabcontent of tabcontents) {
+			tabcontent.classList.remove("active-tab");
+		}
+
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabName).classList.add("active-tab");
+
+	}
+
+
+
+</script>
+
 </body>
 </html>
