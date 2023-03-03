@@ -19,9 +19,9 @@ body {
 
 
 
-.icons {
+/* .icons {
 	color: var(--secondary);
-}
+} */
 
 /* .homeIcon {
 	vertical-align: auto;
@@ -93,12 +93,12 @@ nav ul li a:hover::after {
 
 .header-text-col-1 {
 	/* align-self: flex-start; */
-	background-color: aquamarine;
+	/* background-color: aquamarine; */
 }
 
 .header-text-col-pic {
 	/* align-self: flex-end; */
-	background-color: aqua;
+	/* background-color: aqua; */
 }
 
 .mex {
@@ -203,5 +203,71 @@ nav ul li a:hover::after {
 
 .tab-contents.active-tab {
 	display: block;
-	
+
+}
+
+/* ------contact------ */
+
+.contact-left {
+	flex-basis: 50%;
+}
+
+.contact-left p {
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+.contact-left p i {
+	margin-right: 15px;
+	/* font-size: 25px; */
+}
+
+.social-icons {
+	margin-top: 30px;
+
+}
+
+.social-icons a, .email {
+	text-decoration: none;
+	font-size: 30px;
+	margin-right: 15px;
+	color: var(--secondary);
+	display: inline-block;
+	transition: transform 0.5s;
+}
+
+.social-icons a:hover, .email:hover {
+	color: var(--primary);
+	transform: translateY(-5px);
+}
+
+.contact-right {
+	flex-basis: 50%;
+}
+
+.contact-right p {
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+.contact-right a i {
+	margin-right: 10px;
+}
+
+.btn.btn2 {
+	display: flex;
+	border: 1px solid var(--secondary);
+	border-radius: 25px;
+	color: var(--secondary);
+	width: 200px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: ease 0.5s;
+}
+
+.btn.btn2:hover{
+	color: #000;
+	background-color: #fff;
 }
