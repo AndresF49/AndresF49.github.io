@@ -149,6 +149,10 @@ nav ul li a:hover::after {
 	flex-basis: 60%;
 }
 
+.about-col-2 p {
+	font-size: 22px;
+}
+
 .sub-title {
 	font-size: 60px;
 	font-weight: 600;
@@ -163,7 +167,7 @@ nav ul li a:hover::after {
 
 .tab-links {
 	margin-right: 50px;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 500;
 	cursor: pointer;
 	position: relative;
@@ -181,18 +185,23 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-	width: 50%;
+	width: 100%;
 }
 
 .tab-contents ul li {
 	list-style: none;
 	margin: 10px 0;
+	font-size: 20px
 
 }
 
 .tab-contents ul li span {
 	color: var(--secondary);
-	font-size: 14px;
+	font-size: 22px;
+}
+
+.tab-contents ul li {
+	padding-top: 10px;
 }
 
 .tab-contents {
