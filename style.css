@@ -165,7 +165,7 @@ nav ul li a:hover::after {
 
 }
 
-.tab-links {
+.tab-links, .tab-linksP {
 	margin-right: 50px;
 	font-size: 25px;
 	font-weight: 500;
@@ -173,7 +173,9 @@ nav ul li a:hover::after {
 	position: relative;
 }
 
-.tab-links::after {
+/* -----------about/projects------------- */
+
+.tab-links::after, .tab-linksP::after {
 	content: '';
 	width: 0;
 	height: 3px;
@@ -184,33 +186,40 @@ nav ul li a:hover::after {
 	transition: 0.5s;
 }
 
-.tab-links.active-link::after {
+.tab-links.active-link::after, .tab-linksP.active-link::after {
 	width: 100%;
 }
 
-.tab-contents ul li {
+.tab-contents ul li, .tab-contentsP ul li {
 	list-style: none;
 	margin: 10px 0;
 	font-size: 20px
 
 }
 
-.tab-contents ul li span {
+.tab-contents ul li span, .tab-contentsP ul li span {
 	color: var(--secondary);
 	font-size: 22px;
 }
 
-.tab-contents ul li {
+.tab-contents ul li, .tab-contentsP ul li {
 	padding-top: 10px;
 }
 
-.tab-contents {
+.tab-contents, .tab-contentsP{
 	display: none;
 }
 
-.tab-contents.active-tab {
+.tab-contents.active-tab, .tab-contentsP.active-tab{
 	display: block;
 
+}
+
+/* -----------more project------------- */
+
+.projectLink a{
+	color:white;
+	font-size: 20px;
 }
 
 /* ------contact------ */

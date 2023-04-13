@@ -15,6 +15,7 @@
 				<ul>
 					<li><a href="#header">Home</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -86,8 +87,119 @@
 			</div>
 		</div>
 
-		<!-- --------contact--------- -->
+		<!-- --------Projects--------- -->
+		<div id="projects">
+			<div class="container">
+				<div class="row">
+					<h1 class="sub-title">Projects</h1>
+				</div>
+				<div class="row">
+					<div class="tab-titles">
+						<p class="tab-linksP active-link" onclick="opentabP('qEnergy')">qEnergy</p>
+						<p class="tab-linksP" onclick="opentabP('pdfMerge')">pdfMerge</p>
+						<p class="tab-linksP" onclick="opentabP('socketProgram')">Server/Client Socket Program</p>
+						<p class="tab-linksP" onclick="opentabP('mazeSolver')">Maze Solver</p>
+					</div>
 
+					<div class="tab-contentsP active-tab" id="qEnergy">
+						<!-- qEnergy -->
+						<div class="description">
+							<ul>
+								<li><b>Description:</b> Web application for a “company” to request fuel quotes to purchase from “qEnergy” using .NET Core MVC.</li>
+							</ul>
+							<hr/>
+						</div>
+						<div class="keyFeatures">
+							<ul>
+								<li>The app will predict the rate of the fuel based on customer history, location, company profit margin, and amount of gallons requested.</li>
+								<li>Login/Register forms and Quote request forms with CRUD functionalities utilizing Azure SQL with hosting on Azure.</li>
+							</ul>
+						</div>
+						<div class="techUsed">
+							<ul>
+								<li><b>Technologies used:</b> C#, ASP.NET Core MVC, Xunit, SQL Server, Azure SQL, HTML, CSS, jQuery</li>
+							</ul>
+						</div>
+						<div class="projectLink">
+							<a href="https://github.com/ashehadeh33/Fuel_Application" target="_blank">Link to Github Repository</a>
+						</div>
+					</div>
+					<div class="tab-contentsP" id="pdfMerge">
+						<!-- pdfMerge -->
+						<div class="description">
+							<ul>
+								<li><b>Description:</b> A simple Python script with a simple GUI to merge together PDFs in a specific order.</li>
+							</ul>
+							<hr/>
+						</div>
+						<div class="keyFeatures">
+							<ul>
+								<li>Created for the Physics Business Office to efficiently reduce the number of unnecessary hours of mundane and error-prone manual PDF combining.</li>
+							</ul>
+						</div>
+						<div class="techUsed">
+							<ul>
+								<li><b>Technologies used:</b> Python, PySimpleGUI</li>
+							</ul>
+						</div>
+						<div class="projectLink">
+							<a href="https://github.com/AndresF49/pdfMerge" target="_blank">Link to Github Repository</a>
+						</div>
+					</div>
+					<div class="tab-contentsP" id="socketProgram">
+						<!-- Server/Client Socket Program -->
+						<div class="description">
+							<ul>
+								<li><b>Description:</b> Server and client programs that send and receive data using sockets.</li>
+							</ul>
+							<hr/>
+						</div>
+						<div class="keyFeatures">
+							<ul>
+								<li>Client program will receive a compressed message and create child threads that create a socket to send bits to the Server.</li>
+								<li>Server will receive sockets that give the bits and create child threads to asynchronously handle requests from the client. Server will send back a letter representing the bits received.</li>
+								<li>The client program receives letters and creates the decompressed message.</li>
+							</ul>
+						</div>
+						<div class="techUsed">
+							<ul>
+								<li><b>Technologies used:</b> C++, Sockets, POSIX threads</li>
+							</ul>
+						</div>
+						<div class="projectLink">
+							<a href="https://github.com/AndresF49/COSC3360-Assigment2-ClientServer" target="_blank">Link to Github Repository</a>
+						</div>
+					</div>
+					<div class="tab-contentsP" id="mazeSolver">
+						<!-- Java Maze Solver with GUI -->
+						<div class="description">
+							<ul>
+								<li><b>Description:</b> Java program that visualizes solving mazes with Depth First Searching, Breadth First Searching, and A* Searching.</li>
+							</ul>
+							<hr/>
+						</div>
+						<div class="keyFeatures">
+							<ul>
+								<li>Able to generate small (10x10), medium (20x20), large (30x30), and custom mazes. Able to load mazes and generate new mazes of the same size.</li>
+								<li>Gui gives the option to animate the process of searching or to view the solved maze instantly.</li>
+							</ul>
+						</div>
+						<div class="techUsed">
+							<ul>
+								<li><b>Technologies used:</b> Java, Swift, AWT</li>
+							</ul>
+						</div>
+						<div class="projectLink">
+							<a href="https://github.com/AndresF49/ex-20-maze-gui-AndresF2201147" target="_blank">Link to Github Repository</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<!-- --------contact--------- -->
 		<div id="contact">
 			<div class="container">
 				<div class="row">
@@ -113,7 +225,7 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</footer>
 
 <script>
 	let tablinks = document.getElementsByClassName("tab-links");
@@ -124,6 +236,21 @@
 			tablink.classList.remove("active-link");
 		}
 		for (tabcontent of tabcontents) {
+			tabcontent.classList.remove("active-tab");
+		}
+
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabName).classList.add("active-tab");
+	}
+
+	let tablinksP = document.getElementsByClassName("tab-linksP");
+	let tabcontentsP = document.getElementsByClassName("tab-contentsP");
+
+	function opentabP(tabName) {
+		for (tablink of tablinksP) {
+			tablink.classList.remove("active-link");
+		}
+		for (tabcontent of tabcontentsP) {
 			tabcontent.classList.remove("active-tab");
 		}
 
